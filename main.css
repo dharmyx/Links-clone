@@ -1,0 +1,209 @@
+@import url(https://fonts.googleapis.com/css?family=Mulish);
+
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #E7E8EC;
+    font-family: 'Mulish', sans-serif;
+}
+
+main {
+    max-width: 85%;
+    background-color: #ffffff;
+    border: 1px solid rgb(112, 112, 112, .1);
+    border-radius: 20px;
+    margin: 5rem auto;
+    box-shadow: 0px 9px 50px rgb(112, 112, 112, .5);
+}
+
+div.big-text {
+    width: fit-content;
+    margin: 5rem 0 0 5rem;
+    color: #2F3144;
+    font-family: 'Mulish', sans-serif;
+}
+
+div.content-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "a b c"
+    "d e c";
+    gap: 20px;
+    margin: 2rem 4rem 6rem;
+}
+
+div.boxContent1 {
+    grid-area: a;
+    border: 1px solid #cecece;
+    border-radius: 10px;
+    padding: .2rem;
+    background-color: #ffbb00;
+}
+div.boxContent2 {
+    grid-area: b;
+}
+div.boxContent3 {
+    grid-area: c;
+    border: 1px solid #E7E8EC;
+    box-shadow: 0px 9px 20px rgb(47, 49, 68, .5);
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+div.boxContent4 {
+    grid-area: d;
+}
+div.boxContent5 {
+    grid-area: e;
+}
+
+div.inner-boxContent {
+    padding: .5rem 1rem;
+}
+
+div.grid-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #FFffff;
+    background-image: url(Assets/grid.png);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+    margin: 1rem 0;
+}
+div.collect > p {
+    padding: 1rem 0;
+    font-weight: 200;
+    font-size: .85rem;
+}
+
+div.equal-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #FFbb00;
+    background-image: url(Assets/equals.png);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+    margin: 1rem 0;
+}
+div.imgs-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #FFbb00;
+    background-image: url(Assets/imgs.png);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+    margin: 1rem 0;
+}
+div.codetags-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #FFbb00;
+    background-image: url(Assets/codetag.png);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+    margin: 1rem 0;
+}
+
+div > h3.blog {
+    margin: 2rem 2rem 1rem;
+    color: #2F3144;
+}
+div.xpand,
+div.launch {
+    padding: 1rem 0;
+    margin: 0 2rem;
+    line-height: 1.7;
+    font-family: 'Mulish', sans-serif;
+    color: #2F3144;
+    font-weight: 500;
+}
+div.custom {
+    padding: 2rem 1rem;
+    margin: 0 1rem;
+    border: 1px solid rgb(112, 112, 112, .1);
+    border-radius: 10px;
+    background-color: #F1F2F7;
+    line-height: 1.7;
+    font-family: 'Mulish', sans-serif;
+    color: #2F3144;
+    font-weight: 500;
+}
+p.name {
+    font-size: .75rem;
+    color: #DA8F00;
+}
+
+/*MEDIA QUERRY*/
+
+@media (max-width: 768px) {
+
+    div.big-text {
+        margin: 3rem auto;
+    }
+    div.content-box {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "a b"
+        "d e"
+        "c c";
+        margin: 2rem 2rem 5rem;
+    }
+}
+
+@media (max-width: 425px) {
+    div.big-text {
+        margin: 2rem;
+        font-size: 1rem;
+    }
+    div.content-box {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "a"
+        "b"
+        "d"
+        "e"
+        "c";
+        margin: 2rem 2rem 5rem;
+    }
+}
+
+@media (max-width: 375px) {
+    main {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 320px) {
+    div.big-text {
+        margin: 2rem 1rem;
+        font-size: .85rem;
+    }
+    div.content-box {
+        margin: 1rem 1rem 4rem;
+    }
+    div.grid-icon,
+    div.equal-icon,
+    div.imgs-icon,
+    div.codetags-icon {
+        width: 45px;
+        height: 45px;
+        margin: .5rem 0;
+    }
+}
